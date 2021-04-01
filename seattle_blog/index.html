@@ -1,0 +1,42 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" type="text/css" href="world-map/includes/style.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="world-map/cssmap-continents/cssmap-continents.css" media="screen" />
+
+  <title>Map</title>
+</head>
+
+<body>
+  <div id="map-continents">
+    <ul class="continents">
+     <li class="c1"><a href="#africa">Africa</a></li>
+     <li class="c2"><a href="#asia">Asia</a></li>
+     <li class="c3"><a href="#australia">Australia</a></li>
+     <li class="c4"><a href="#europe">Europe</a></li>
+     <li class="c5"><a href="#north-america">North America</a></li>
+     <li class="c6"><a href="#south-america">South America</a></li>
+    </ul>
+   </div>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+  <script type="text/javascript" src="world-map/includes/script.js"></script>
+</body>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  
+  // CSSMap;
+  $("#map-continents").CSSMap({
+    "size": 1450
+  });
+  // END OF THE CSSMap;
+  
+  });
+  </script>
+
+</html>
