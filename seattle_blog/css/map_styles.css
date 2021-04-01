@@ -1,0 +1,8 @@
+
+$("#map-continents").CSSMap({
+// MAP SIZE MUST BE SET;
+"size": 1450,
+
+// OTHER OPTIONS;
+"cities": true
+});

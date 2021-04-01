@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visited Locations</title>
+    <link rel="stylesheet" type="text/css" href="cssmap-continents/cssmap-continents.css" media="screen" />
+    <link rel="stylesheet" href="../css/reset_sheet.css" />
+</head>
+<body>
+<!-- jQuery -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- CSSMap SCRIPT -->
+<script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+// CSSMap;
+        $("#map-continents").CSSMap({
+            "size": 1450,
+            "tooltips": "floating-top-center",
+            "responsive": "auto",
+            "fitHeight": true,
+            "visibleList": {
+                "enable": true,
+                "listPosition": "bottom",
+                "columns": 1,
+                "columnsGap": 0,
+                "columnWidth": 0
+            },
+            "pins": {
+                "enable": true,
+                "pinsId": "#demo-markers",
+                "mapSize": 1450,
+                "markerPosition": "middle",
+                "tooltipPosition": "top",
+                "tooltipOnClick": false,
+                "clickableRegions": true
+            }
+        });
+// END OF THE CSSMap;
+
+    });
+</script>
+<main>
+    <nav>
+        <ul>
+            <li><a href="about_me.html">About Me!</a></li>
+            <li><a href="email_me.html">Inquires</a></li>
+            <li><a href="future.html">Future Locations</a> </li>
+            <li><a href="home_page.html">Home Page</a></li>
+        </ul>
+    </nav>
+</main>
+</body>
+</html>
