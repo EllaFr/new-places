@@ -1,8 +1,19 @@
 
 $("#map-continents").CSSMap({
-// MAP SIZE MUST BE SET;
+/* MAP SIZE MUST BE SET; */
 "size": 1450,
 
-// OTHER OPTIONS;
+/* OTHER OPTIONS; */
 "cities": true
 });
+
+<script type="text/javascript">
+                              $(document).ready(function(){
+
+/* CSSMap; */
+$("#map-europe").CSSMap({
+"size": 1450
+});
+/* END OF THE CSSMap; */
+});
+</script>
