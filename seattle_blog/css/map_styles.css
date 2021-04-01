@@ -8,7 +8,7 @@ $("#map-continents").CSSMap({
 });
 
 <script type="text/javascript">
-                              $(document).ready(function(){
+$(document).ready(function(){
 
 /* CSSMap; */
 $("#map-europe").CSSMap({
