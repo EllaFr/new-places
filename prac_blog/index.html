@@ -1,0 +1,128 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="world-map/includes/style.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="world-map/cssmap-continents/cssmap-continents.css" media="screen"/>
+    <link rel="stylesheet" href="css/map_styles.css"/>
+    <link rel="stylesheet" href="world-map/includes/pin.png" />
+    <link rel="stylesheet" href="css/reset_sheet.css"/>
+
+    <title>Map</title>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">BLOG</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="about_me.html" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a href="current_locations.html" class="nav-link">CURRENT</a>
+            </li>
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link">FUTURE</a>
+            </li>
+            <li class="nav-item">
+                <a href="email_me.html" class="nav-link">EMAIL</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<div id="map-continents">
+    <ul class="continents">
+        <li class="c1"><a href="#africa">Africa</a></li>
+        <li class="c2"><a href="#asia">Asia</a></li>
+        <li class="c3"><a href="#australia">Australia</a></li>
+        <li class="c4"><a href="#europe">Europe</a></li>
+        <li class="c5"><a href="#north-america">North America</a></li>
+        <li class="c6"><a href="#south-america">South America</a></li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cssmapsplugin.com/5/jquery.cssmap.min.js"></script>
+<script type="text/javascript" src="world-map/includes/script.js"></script>
+
+<!-- CSSMap MARKERS -->
+<div id="demo-markers">
+    <ul class="cssmap-pins">
+        <li class="cssmap-pin" data-cssmap-coords="780,700">
+
+            <div class="cssmap-tooltip-content">
+                Phasellus quis est sed turpis sollicitudin venenatis. Praesent eget neque eu eros interdum.
+            </div>
+            <a href="#" class="cssmap-marker"><img src="includes/pin.png" width="20" height="25" alt="pin"/></a>
+
+        </li>
+        <li class="cssmap-pin" data-cssmap-coords="480,785">
+
+            <div class="cssmap-tooltip-content">
+                Proin quis tortor orci. Etiam at risus et justo dignissim congue.
+            </div>
+            <a href="#" class="cssmap-marker"><img src="includes/pin.png" width="20" height="25" alt="pin"/></a>
+
+        </li>
+    </ul>
+</div>
+<!-- END OF THE CSSMap MARKERS -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+// CSSMap;
+        $("#map-europe").CSSMap({
+            "size": 850,
+            "tooltips": "floating-top-center",
+            "responsive": "auto",
+            "fitHeight": true,
+            "pins": {
+                "enable": true,
+                "pinsId": "#demo-markers",
+                "mapSize": 1450,
+                "markerPosition": "middle",
+                "tooltipPosition": "top",
+                "tooltipOnClick": false,
+                "clickableRegions": true
+            }
+        });
+// END OF THE CSSMap;
+
+    });
+</script>
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        // CSSMap;
+        $("#map-continents").CSSMap({
+            "size": 850
+        });
+        // END OF THE CSSMap;
+
+    });
+</script>
+
+</html>
